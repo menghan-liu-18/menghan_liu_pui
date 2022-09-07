@@ -124,6 +124,11 @@ select {
     padding: 0px 0px 0px 
 }
 
+.conclu-text {
+    margin-left: 30px; 
+    font-size: 30px
+}
+
 .add {
     display: inline-block;
     background-color: yellow;
@@ -154,6 +159,18 @@ select {
     text-indent: 2px;
 }
 
+.cart-rem {
+    display: block; 
+    text-align: center; 
+    font-size: 18px
+}
+
+.cart-text {
+    text-align: center;
+    font-size: 30px; 
+    margin-bottom: 50px
+}
+
 .lower-break {
     height: 5px;
     width: 800px;
@@ -171,4 +188,10 @@ select {
     margin: 5px auto 100px auto;
     font-size: 26px;
     font-weight: 550;
+}
+
+.cart-summ {
+    text-align: center;
+    font-size: 30px; 
+    margin-bottom: 25px;
 }
