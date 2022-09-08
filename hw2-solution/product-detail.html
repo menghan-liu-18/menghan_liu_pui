@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            product-detail
+        </title>
+        <link rel = "stylesheet" href = "css/style.css">
+    </head>
+
+    <body>
+        <div>
+            <a href = "gallary-page.html">
+                <img class = "bun-logo" src = "logo/logo-01.svg" alt = "logo">
+            </a>
+            
+            <hr class = "upper-break">
+        </div>
+
+        <nav>
+            <button class = "back" onclick = "document.location = 'gallary-page.html'">PRODUCTS</button>
+
+            <button class = "back" onclick= "document.location = 'cart.html'">CART</button>
+
+            <p class = "sub-title">
+                Original cinnamon roll
+            </p>
+        </nav>
+
+        <main>
+            <div>
+                <img class = "detail-img" src = "products/original-cinnamon-roll.jpg"  alt = "original-cinnamon-roll" >
+                <p class = "detail-text">
+                    Customize our delicious, hand-made cinnamon roll to your liking!
+                </p>
+            </div>
+
+            <div>
+                <label class = "lable-style" for = "glazing-select">Choose a glazing:</label>
+                <br>
+
+                <select name = "glazing" id = "glazing-select">
+                    <option value="original">Keep original</option>
+                    <option value="Sugar milk">Sugar milk</option>
+                    <option value="Vanilla milk">Vanilla milk</option>
+                    <option value="Double chocolate">Double chocolate</option>
+                </select>
+
+                <label class = "lable-style" for = "pack-size">Pack size:</label>
+                <br>
+
+                <select name = "size" id = "pack-size">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+
+            <div class = "conclu">  
+                <p class = "conclu-text">
+                    $ 2.49&nbsp;&nbsp;<button class = "add" onclick = "document.location = 'cart.html'">Add to cart</button>
+                </p>
+            </div>
+
+
+        </main>
+
+    </body>
+</html>
