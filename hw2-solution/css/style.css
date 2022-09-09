@@ -217,7 +217,7 @@ select {
     height: 150px;
     border: solid black 3px;
     display: block;
-    margin: 50px auto 10px auto;
+    margin: 30px auto 10px auto;
 }
 
 .cart-right {
@@ -254,7 +254,7 @@ select {
 
 .cart-rem {
     display: block; 
-    text-align: center; 
+    text-align: left; 
     font-size: 18px
 }
 
