@@ -205,6 +205,8 @@ select {
 
 #cart {
     display: flex;
+    width: 1200px;
+    margin: 0px 0px 0px 0px;
 }
 
 .cart-left {
@@ -221,7 +223,7 @@ select {
 }
 
 .cart-right {
-    width: calc(100% - 480px);
+    width: 720px;
 }
 
 .cart-summ {
@@ -267,7 +269,7 @@ select {
 
 .lower-break {
     height: 5px;
-    width: 800px;
+    width: auto;
     color: black;
     background-color: black;
     margin-bottom: 20px;
