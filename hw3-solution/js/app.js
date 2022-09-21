@@ -3,6 +3,8 @@ const item = {
     packAdd: 1
 };
 
+// Change glazing based on the element 
+
 function glazingChange (element) {
     const priceChange = element.value;
     if (priceChange == "Keep original") {
@@ -24,6 +26,8 @@ function glazingChange (element) {
     updatePrice(item.glazingAdd, item.packAdd);
 };
 
+// Change pack size based on the element
+
 function packChange (element) {
     const packPrice = element.value;
     if (packPrice == "1") {
@@ -44,6 +48,8 @@ function packChange (element) {
 
     updatePrice(item.glazingAdd, item.packAdd);
 }
+
+// Update the price
 
 function updatePrice(glazingPrice, packPrice) {
     let price = (2.49 + glazingPrice) * packPrice;
