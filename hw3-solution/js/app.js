@@ -1,60 +1,80 @@
-const item = {
-    glazingAdd: 0,
-    packAdd: 1
+class ItemG {
+    itemGlazingName;
+    itemGlazingValue;
+
+    constructor(itemGlazingName, itemGlazingValue) {
+        this.itemGlazingName = itemGlazingName;
+        this.itemGlazingValue = itemGlazingValue;
+    }
 };
 
-// Change glazing based on the element 
+class ItemP {
+    itemPackSize;
+    itemPackValue;
+
+    constructor(packSize, packValue) {
+        this.itemPackSize = packSize;
+        this.itemPackValue = packValue;
+    }
+}
+
+let keepOriginal = new ItemG ("Keep original", 0);
+let sugarMilk = new ItemG ("Sugar milk", 0);
+let vanillaMilk = new ItemG ("Vanilla milk", 0.5);
+let doubleCho = new ItemG ("Double chocolate", 1.5);
+
+let glazingArr = [keepOriginal, sugarMilk, vanillaMilk, doubleCho];
+
+let selectGlazing = document.querySelector('#glazing-select');
+
+for (i = 0;i<4;i++) {
+    var option = document.createElement('option');
+    option.text = glazingArr[i].itemGlazingName;
+    option.value = glazingArr[i].itemGlazingValue;
+    selectGlazing.add(option);
+};
+
+let size1 = new ItemP ("1", 1);
+let size3 = new ItemP ("3", 3);
+let size6 = new ItemP ("6", 5);
+let size12 = new ItemP ("12", 10);
+
+let sizeArr = [size1, size3, size6, size12];
+
+let selectSize = document.querySelector('#pack-size');
+
+for (i = 0;i<4;i++) {
+    var option = document.createElement('option');
+    option.text = sizeArr[i].itemPackSize;
+    option.value = sizeArr[i].itemPackValue;
+    selectSize.add(option);
+};
+
+const curr = {
+    currGlaze: 0,
+    currPack: 1,
+};
 
 function glazingChange (element) {
     const priceChange = element.value;
-    if (priceChange == "Keep original") {
-        item.glazingAdd = 0;
-    }
-
-    if (priceChange == "Sugar milk") {
-        item.glazingAdd = 0;
-    }
-
-    if (priceChange == "Vanilla milk") {
-        item.glazingAdd = 0.5;
-    }
-
-    if (priceChange == "Double chocolate") {
-        item.glazingAdd = 1.5;
-    }
-
-    updatePrice(item.glazingAdd, item.packAdd);
+    curr.currGlaze = Number(priceChange);
+    
+    updatePrice();
 };
-
-// Change pack size based on the element
 
 function packChange (element) {
     const packPrice = element.value;
-    if (packPrice == "1") {
-        item.packAdd = 1;
-    }
+    curr.currPack = Number(packPrice);
 
-    if (packPrice == "3") {
-        item.packAdd = 3;
-    }
-
-    if (packPrice == "6") {
-        item.packAdd = 5;
-    }
-
-    if (packPrice == "12") {
-        item.packAdd = 10;
-    }
-
-    updatePrice(item.glazingAdd, item.packAdd);
+    updatePrice();
 }
 
 // Update the price
 
-function updatePrice(glazingPrice, packPrice) {
-    let price = (2.49 + glazingPrice) * packPrice;
+function updatePrice() {
+    let price = (2.49 + curr.currGlaze) * curr.currPack;
 
     const concluText = document.querySelector('.conclu-text');
 
-    concluText.innerText = '$' + price.toFixed(2);
+    concluText.innerText = '$ ' + price.toFixed(2);
 };
