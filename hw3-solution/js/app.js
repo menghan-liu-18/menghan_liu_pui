@@ -1,3 +1,4 @@
+// create glazing items
 class ItemG {
     itemGlazingName;
     itemGlazingValue;
@@ -8,6 +9,7 @@ class ItemG {
     }
 };
 
+// create pack size items
 class ItemP {
     itemPackSize;
     itemPackValue;
@@ -27,6 +29,7 @@ let glazingArr = [keepOriginal, sugarMilk, vanillaMilk, doubleCho];
 
 let selectGlazing = document.querySelector('#glazing-select');
 
+// display glazing options
 for (i = 0;i<4;i++) {
     var option = document.createElement('option');
     option.text = glazingArr[i].itemGlazingName;
@@ -43,6 +46,7 @@ let sizeArr = [size1, size3, size6, size12];
 
 let selectSize = document.querySelector('#pack-size');
 
+// display pack size options
 for (i = 0;i<4;i++) {
     var option = document.createElement('option');
     option.text = sizeArr[i].itemPackSize;
@@ -50,6 +54,7 @@ for (i = 0;i<4;i++) {
     selectSize.add(option);
 };
 
+// the current one
 const curr = {
     currGlaze: 0,
     currPack: 1,
