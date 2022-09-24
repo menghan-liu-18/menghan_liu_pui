@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            product-detail
+        </title>
+
+        <link rel = "stylesheet" href = "css/style.css">
+
+        <script defer src="js/rollsData.js"></script>
+        <script defer src="js/detailPrice.js"></script>
+    </head>
+
+    <body>
+        <div id = "header-section">
+            <div class = "header-logo">
+                <a href = "gallary-page.html">
+                    <img class = "bun-logo" src = "logo/logo-01.svg" alt = "logo">
+                </a>
+            </div>
+            <div class = "header-text">
+                <nav>
+                    <button class = "back" onclick = "document.location = 'gallary-page.html'">PRODUCTS</button>
+
+                    <button class = "back" onclick= "document.location = 'cart.html'">CART</button>
+                </nav>
+
+                <hr class = "upper-break">
+
+                <p id = "product-name">
+                    Original cinnamon roll
+                </p>
+            </div>
+
+        </div>
+
+        <div id = "detail">
+            <div class = "detail-left">
+                <img class = "detail-img" src = "products/original-cinnamon-roll.jpg"  alt = "cinnamon-roll" >
+            </div>
+
+            <div class = "detail-right">
+                <p class = "detail-text">
+                    Customize our delicious, hand-made cinnamon roll to your liking!
+                </p>
+
+                <div>
+                    <label class = "lable-style" for = "glazing-select">Glazing:</label>
+                    
+                    <select name = "glazing" id = "glazing-select" onchange = "glazingChange(this)">
+                    </select>
+                    
+                    <label class = "lable-style" for = "pack-size" >Pack size:</label>
+
+                    <select name = "size" id = "pack-size" onchange = "packChange(this)">
+                    </select>
+                </div>
+
+                <div class = "conclu">  
+                    <p class = "conclu-text">
+                    </p>
+                    
+                    <!-- <button class = "add" onclick = "document.location = 'product-detail.html'">Add to cart</button> -->
+                    <button class = "add">Add to cart</button>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
