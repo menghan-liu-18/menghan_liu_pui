@@ -97,7 +97,11 @@ const queryString = window.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const chosenRoll = params.get('roll');
+let chosenRoll = params.get('roll');
+
+if(chosenRoll == "Double-chocolate") {
+    chosenRoll = "Double chocolate";
+};
 
 const baseNumber = document.querySelector(".conclu-text");
 
