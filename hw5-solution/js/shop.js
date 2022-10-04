@@ -85,6 +85,7 @@ let totalPrice = 0;
 function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
     const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
     cart.add(newRoll);
+    createRoll(newRoll);
 };
 
 for (const roll of cart) {
@@ -98,6 +99,11 @@ function createRoll (roll) {
 
     const cartRightList = document.querySelector('.cart-right');
     cartRightList.prepend(roll.element);
+
+    const removeBtn = document.querySelector('.cart-rem');
+    removeBtn.addEventListener('click', () => {
+        deleteRoll(roll);
+    });
 
     updateRollList(roll);
 };
@@ -122,9 +128,22 @@ function updateRollList(roll) {
     updatePriceAll();
 };
 
-console.log(totalPrice);
+function deleteRoll(roll) {
+    if(cart.size == 0) {
+        return;
+    };
+    const priceOne = updateOnePrice(roll);
+    totalPrice -= parseFloat(priceOne);
+    roll.element.remove();
+    cart.delete(roll);
+    updatePriceAll();
+}
 
 function updatePriceAll() {
     const totalText = document.querySelector('.total-price');
-    totalText.innerText = "$ " +  totalPrice;
+    if(cart.size == 0) {
+        totalText.innerText = "$ 0";
+    } else {
+        totalText.innerText = "$ " +  totalPrice.toFixed(2);
+    }
 }

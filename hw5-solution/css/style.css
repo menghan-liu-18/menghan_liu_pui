@@ -274,7 +274,10 @@ select {
 .cart-rem {
     display: block; 
     text-align: left; 
-    font-size: 18px
+    font-size: 18px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .summ-price {
