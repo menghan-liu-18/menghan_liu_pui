@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            shopping-cart
+        </title>
+        <link rel = "stylesheet" href = "css/style.css">
+
+        <script defer src="js/rollsData.js"></script>
+        <script defer src="js/shop.js"></script>
+    </head>
+
+    <body>
+        <div id = "header-section">
+            <div class = "header-logo">
+                <a href = "gallary-page.html">
+                    <img class = "bun-logo" src = "logo/logo-01.svg" alt = "logo">
+                </a>
+            </div>
+
+            <div class = "header-text">
+                <nav>
+                    <button class = "back" onclick = "document.location = 'gallary-page.html'">PRODUCTS</button>
+
+                    <button class = "back" onclick= "document.location = 'cart.html'">CART</button>
+                </nav>
+
+                <hr class = "upper-break">
+
+                <p class = "sub-title">
+                    Shopping Cart
+                </p>
+            </div>
+
+        </div>
+
+        <div id = "cart">
+            <div class = "cart-left"></div>
+
+            <div class = "cart-right">
+                <template id = "cart-sum-template">
+                    <div class = "cart-summ">
+                        <div class = "set">
+                            <div class = "set-left">
+                                <img class = "cart-img">
+                                <button class = "cart-rem">Remove</button>
+                            </div>
+
+                            <div class = "set-right">
+                            </div>
+                        </div>
+                        <!-- <div class = "set">
+                            <div class = "set-left">
+                                <img class = "cart-img" src = "products/original-cinnamon-roll.jpg" alt = "roll1">
+                                <a href = "" class = "cart-rem">Remove</a>
+                            </div>
+    
+                            <div class = "set-right">
+                                <p class = "summ-text">
+                                    Original Cinnamon Roll <br> Glazing: Keep original <br> Pack Size: 1
+                                </p>
+    
+                                <p class = "summ-price">
+                                    $ 2.49
+                                </p>
+                            </div>
+                        </div> -->
+    
+                        <!-- <div class = "set">
+                            <div class = "set-left">
+                                <img class = "cart-img" src = "products/double-chocolate-cinnamon-roll.jpg" alt = "roll2">
+                                <a href = "" class = "cart-rem">Remove</a>
+                            </div>
+    
+                            <div class = "set-right">
+                                <p class = "summ-text">
+                                    Double Chocolate Cinnamon Roll <br> Glazing: Sugar milk <br> Pack Size: 6
+                                </p>
+                                
+                                <p class = "summ-price">
+                                    $ 27.45
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                </template>
+
+                <hr class = "lower-break">
+
+                <div class = "total">
+                    <p class = "total-text">
+                        Total
+                    </p>
+
+                    <p class = "total-price">
+                        $ 29.94
+                    </p>
+                </div>
+
+                <button class = "check">Checkout</button>
+
+            </div>
+        </div>
+
+    </body>
+</html>
