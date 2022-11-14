@@ -1,12 +1,10 @@
 body {
-    background-color:#F8FAE4;
+    background-image: url("asset/Group 55.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
-/* #bg{
-    height: 832px;
-    margin-top: auto;
-} */
 
 h1 {
     font-family: "Inconsolata";
