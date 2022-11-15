@@ -60,30 +60,35 @@ body {
 .heu-sec {
     display: flex;
     width: 320px;
-    height: 101px;
+    min-height: 101px;
     background-color: #D8CBBB;
     border-radius: 15px;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
 .heu-sec-text {
-    margin: 0 auto 0 auto;
+    width: 100%;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 .heu-heading {
+    width: 80%;
     font-family: "Inconsolata";
     color: #234C63;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .heu-sec-tri {
     width: 0;
 	height: 0;
-    margin-right: 30px;
+    margin: 30px 5px auto auto;
 	border-left: 25px solid #D8CBBB;
 	border-right: 25px solid #D8CBBB;
 	border-top: 50px solid #234C63;
@@ -95,3 +100,17 @@ body {
     cursor: pointer;
 }
 
+.exp {
+    margin: 10px auto 10px auto;
+    padding-left: 10px;
+    text-align: left;
+    border-top: 3px solid #4A4A4A;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 20px;
+    color: #234C63;
+}
+
+.hidden {
+    display: none;
+}

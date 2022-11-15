@@ -14,7 +14,7 @@ const heuristics = {
     "Satisficing": {
         "text": "Search through alternatives, and choose the first one that exceeds your aspiration level."
     },
-    "Equality heuristic (1/N)": {
+    "Equality heuristic": {
         "text": "Allocate resources equally to each of N alternatives."
     },
     "Default heuristic": {
@@ -26,7 +26,7 @@ const heuristics = {
     "Imitate the majority": {
         "text": "Look at a majority of people in your peer group, and imitate their behavior."
     },
-    "Imitate the successful": {
+    "Imitate success": {
         "text": "Look for the most successful person and imitate his or her behavior."
     },
     "Affective heuristic": {
