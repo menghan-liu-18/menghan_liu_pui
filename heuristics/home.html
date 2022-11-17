@@ -11,14 +11,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
 
         <link rel = "stylesheet" href = "css/style_1.css">
-        <script defer src="js/bg.js"></script>
+        <script defer src="js/quiz.js"></script>
     </head>
 
     <body style="background-image: url('asset/Group 55.jpg');">
         <!-- <img id = "bg" src = "asset/Group 55.jpg" alt = "bg-img"> -->
         <h1>Are you as logical as you think you are?</h1>
 
-        <div class = "intro">
+        <div class = "intro-home">
             <p>Heuristics refers to the simple yet not necessarily rational strategies. 
                 Sometimes the “trap” is too common that we don't even realize that. 
                 Take the quiz here to find out what's “flawed” in your mind! 
@@ -26,8 +26,10 @@
         </div>
 
         <div class = "nav-sec">
-            <button class = "nav-btn" onclick = "document.location = 'gallery.html'">Heuristics Gallery</button>
-            <button class = "nav-btn" onclick = "document.location = 'quiz-mc'">Start the quiz</button>
+            <button id = "nav-btn-left" onclick = "document.location = 'gallery.html'">Heuristics Gallery</button>
+            <a href = "quiz-mc.html?Num=1">
+                <button id = "nav-btn-right">Start the quiz</button>
+            </a>
         </div>
     </body>
 </html>
