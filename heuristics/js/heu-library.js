@@ -53,10 +53,10 @@ const question = {
     },
     "No3": {
         "Prompt": "Which city has the larger population?",
-        "A1": "Albuquerque",
-        "A2": "Atlanta",
-        "Cor": "A1",
-        "Exp": "If you have no idea where Albuquerque is and chose Atlanta, it is likely that you used the recognition heuristic, which means that if you recognize one of two alternatives, you will be likely to infer that the recognized option has the higher value on the criterion. In this case, because you know Atlanta, you would choose it.",
+        "A1": "Atlanta",
+        "A2": "Albuquerque",
+        "Cor": "A2",
+        "Exp": "If you had no idea where Albuquerque is and chose Atlanta, it is likely that you used the recognition heuristic, which means that if you recognize one of two alternatives, you will be likely to infer that the recognized option has the higher value on the criterion. In this case, because you know Atlanta, you would choose it.",
         "link": "quiz-mc.html?Num=4",
     },
     "No4": {
@@ -65,10 +65,10 @@ const question = {
         "A2": "The smaller hospital",
         "Cor": "A2",
         "Exp": "If you are familiar with the effect of sample size in sampling distributions, then you would know that as the sample size gets larger, there will be less variation at the end and there the distribution will be closer to a normal distribution. Therefore, the smaller hospital has a higher chance of having more days with 60% boys.",
-        "link": "quiz-mc.html?Num=5",
+        "link": "quiz-text.html?Num=5",
     },
     "No5": {
-        "Prompt": "Quick question: A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost? No pen or paper allowed.",
+        "Prompt": "Quick question: A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost? No pen or paper allowed.\n(e.g. type 3.23 in the box below)",
         "entry": "1.05",
         "Exp": "The answer should be $1.05 for the bat and $0.05 for the ball, but when people are using system 2 (where most of the heuristics are processed) to process questions like this, it's easy to say $1 and $0.1.",
         "link": "quiz-mc.html?Num=6",

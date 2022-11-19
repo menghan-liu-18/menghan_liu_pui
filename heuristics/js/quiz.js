@@ -19,7 +19,6 @@ function answerClick(que) {
             intro.style.fontSize = "22px";
             intro.style.textAlign = "left";
             intro.style.fontFamily = "DM Sans";
-
             choiceL.disabled = true;
             choiceL.style.pointerEvents = "none";
             choiceR.disabled = true;
@@ -35,7 +34,6 @@ function answerClick(que) {
             intro.style.fontSize = "22px";
             intro.style.textAlign = "left";
             intro.style.fontFamily = "DM Sans";
-
             choiceL.disabled = true;
             choiceL.style.pointerEvents = "none";
             choiceR.disabled = true;
@@ -54,6 +52,10 @@ function answerClick(que) {
             intro.style.fontSize = "22px";
             intro.style.textAlign = "left";
             intro.style.fontFamily = "DM Sans";
+            choiceL.disabled = true;
+            choiceL.style.pointerEvents = "none";
+            choiceR.disabled = true;
+            choiceR.style.pointerEvents = "none";
         }
 
         choiceR.onclick = function() {
@@ -65,11 +67,43 @@ function answerClick(que) {
             intro.style.fontSize = "22px";
             intro.style.textAlign = "left";
             intro.style.fontFamily = "DM Sans";
+
+            choiceL.disabled = true;
+            choiceL.style.pointerEvents = "none";
+            choiceR.disabled = true;
+            choiceR.style.pointerEvents = "none";
         }
     } 
 }
 
+function submitClick(que) {
+    const sbm = document.getElementById('submit');
+    const ans = document.getElementById('ans');
+    const intro = document.getElementById('intro');
+    const nextQ = document.getElementById("next");
+    
+    sbm.onclick = function() {
+        intro.innerText = que.Exp;
+        intro.style.fontSize = "22px";
+        intro.style.textAlign = "left";
+        intro.style.fontFamily = "DM Sans";
+        nextQ.style.display = "block";
+        nextQ.href = que.link;
+        
+        if(ans.value == que.entry) {
+            ans.style.backgroundColor = "#379956";
+        } else {
+            ans.style.border = "thick solid #FFC85B";
+        }
+
+        ans.disabled = true;
+        sbm.disabled = true;
+        sbm.style.pointerEvents = "none";
+    }
+}
+
 function updateQ() {
+
     if(chosenQ == '1') {
         const heading = document.querySelector('h1');
         heading.innerText = 'Question 1';
@@ -95,9 +129,12 @@ function updateQ() {
 
         const leftBtn = document.getElementById('nav-btn-left');
         leftBtn.innerText = question.No2.A1;
+        leftBtn.style.fontSize = "22px";
+        // leftBtn.style.lineHeight = "3px"
 
         const rightBtn = document.getElementById('nav-btn-right');
         rightBtn.innerText = question.No2.A2;
+        rightBtn.style.fontSize = "22px";
 
         answerClick(question.No2);
     }
@@ -131,7 +168,7 @@ function updateQ() {
         const rightBtn = document.getElementById('nav-btn-right');
         rightBtn.innerText = question.No4.A2;
 
-        answerClick(question.No2=4);
+        answerClick(question.No4);
     }
 
     if(chosenQ == '5') {
@@ -141,7 +178,27 @@ function updateQ() {
         const intro = document.getElementById('intro');
         intro.innerText = question.No5.Prompt;
         
-        answerClick(question.No5);
+        submitClick(question.No5);
+    }
+
+    if(chosenQ == '6') {
+        const heading = document.querySelector('h1');
+        heading.innerText = 'Question 6';
+
+        const intro = document.getElementById('intro');
+        intro.innerText = question.No6.Prompt;
+
+        const leftBtn = document.getElementById('nav-btn-left');
+        leftBtn.innerText = question.No6.A1;
+        leftBtn.style.fontSize = "22px";
+        leftBtn.style.lineHeight = "20px";
+
+        const rightBtn = document.getElementById('nav-btn-right');
+        rightBtn.innerText = question.No6.A2;
+        rightBtn.style.fontSize = "22px";
+        rightBtn.style.lineHeight = "20px";
+
+        answerClick(question.No6);
     }
 }
 
