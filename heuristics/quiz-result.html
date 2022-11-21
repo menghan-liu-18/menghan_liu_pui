@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Quiz Result
+        </title>
+
+        <!-- Import Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inconsolata'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
+
+        <link rel = "stylesheet" href = "css/style_1.css">
+        <!-- <script defer src="js/q.js"></script> -->
+    </head>
+
+    <body style="background-image: url('asset/Group 55.jpg');">
+        <div class = "result-section">
+            <div class = "result-left">
+                <h2 id = "con">Congratulation, <br>you finished!</h2>
+                
+                <button id = "nav-to-gal" onclick = "document.location = 'gallery.html'">Heuristics Gallery -> </button>
+            </div>
+
+            <div class = "result-right">
+                <div id = "conclu">
+                    <p class = "small">Among 12 quesions:</p>
+                    <br>
+
+                    <div class = "line">
+                        <p class = "small">You followed heuristics for </p>
+                        <p id = "num-heu"></p>
+                        <p class = "small"> of them</p>
+                    </div>
+
+                    <div class = "line">
+                        <p class = "small">ou followed logic and probability theory for </p>
+                        <p id = "num-log"></p>
+                        <p class = "small">of them</p>
+                    </div>
+                </div>
+
+                <div class = "graph">
+                    <div class = "graph-group">
+                        <div id = "graph1"></div>
+                        <p class = graph-text>Your Result</p>
+                    </div>
+                    
+                    <div class = "graph-group">
+                        <div id = "graph2"></div>
+                        <p class = graph-text>Other people's result</p>
+                    </div>
+                </div>
+
+                <div class = "closing">
+                    <p class = "big">Being logical</p>
+                    <p class = "small"> is a good thing because it's consistant, but using heuristics is not always bad! It's </p>
+                    <p class = "big">efficient and adaptive.</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -144,6 +144,7 @@ h1 {
     text-align: center;
     border-radius: 10px;
     border: none;
+    color: #F8F9F7;
 }
 
 #submit {
@@ -162,4 +163,126 @@ h1 {
     /* margin-top: -2px; */
     cursor: pointer;
     box-shadow: 3px #888888;
+}
+
+
+/* result section */
+
+.result-section {
+    display: flex;
+}
+
+.result-left {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#con {
+    height: 251px;
+    margin: 261px auto 50px auto;
+    font-family: 'Inconsolata';
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    color: #3B5437;
+}
+
+#nav-to-gal {
+    height: 43px;
+    font-family: 'Inconsolata';
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    background: #829B7B;
+    border-radius: 10px;
+    margin: 0px auto 128px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #FFFFFF;
+    border: none;
+}
+
+#nav-to-gal:hover {
+    margin-top: -2px;
+    cursor: pointer;
+    box-shadow: 3px #888888;
+}
+
+.result-right {
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#conclu {
+    width: 90%;
+    min-height: 256px;
+    padding-top: 50px;
+    padding-left: 20px;
+    margin-right: 64px;
+    margin-top: 128px;
+    background-color: rgba(101, 131, 97, 0.8);;
+    border-radius: 20px;
+    font-family: "DM Sans";
+    color: #FFFFFF;
+}
+
+.line {
+    display: flex;
+}
+
+.small {
+    display: inline;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.big {
+    display: inline;
+    font-weight: 700px;
+    font-size: 28px;
+}
+
+.graph {
+    margin: -100px auto 0px auto;
+    min-height: 322px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 100px;
+}
+
+#graph1 {
+    width: 256px;
+    height: 256px;
+    background-color: #E8CEAE;
+    border-radius: 128px;
+}
+
+#graph2 {
+    width: 256px;
+    height: 256px;
+    background-color: #E8CEAE;
+    border-radius: 128px;
+}
+
+.graph-text {
+    text-align: center;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    color: #486643;
+}
+
+.closing {
+    margin-right: 64px;
+    margin-bottom: 64px;
+    font-family: 'DM Sans';
+    font-weight: bolder;
+    color: #3B5437;
 }
