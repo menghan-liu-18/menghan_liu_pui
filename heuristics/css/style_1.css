@@ -1,6 +1,6 @@
 body {
     background-color: #F8FAE4;
-    background-position: bottom;
+    background-position: center bottom;
     background-image: url("asset/Group 55.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -51,6 +51,8 @@ h1 {
     border-radius: 15px;
     font-weight: 300;
     border: none;
+    transition: box-shadow 1s, margin-top 1s;
+    transition-timing-function: ease;
 }
 
 #nav-btn-left:hover {
@@ -71,6 +73,8 @@ h1 {
     border-radius: 15px;
     font-weight: 300;
     border: none;
+    transition: box-shadow 1s, margin-top 1s;
+    transition-timing-function: ease;
 }
 
 #nav-btn-right:hover {
@@ -81,6 +85,7 @@ h1 {
 
 #intro {
     width: 80%;
+    min-height: 250px;
     box-sizing: border-box;
     margin: 50px auto 50px auto;
     padding: 50px 30px 50px 30px;
@@ -89,14 +94,67 @@ h1 {
     font-size: 30px;
     font-weight: 500;
     background-color: #829B7B;
-    color: #F8F9F7;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-text {
     text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    color: #F8F9F7;
 }
 
 .bar {
     width: 100%;
     margin: 10px auto 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    min-width: 28px;
+    max-width: 36px;
+    min-height: 28px;
+    border-radius: 14px;
+    background-color: #D9D9D9;
+}
+
+.circle-final {
+    min-width: 28px;
+    max-width: 36px;
+    min-height: 28px;
+    border-radius: 14px;
+    background-color: #379956;   
+}
+
+.line {
+    min-width: 185px;
+    max-width: 237px;
+    height: 10px;
+    transition: 2s ease-out;
+    background: linear-gradient(to left, #D9D9D9 50%, #379956 50%) right;
+    background-size: 200%;
+}
+
+.line-static {
+    min-width: 185px;
+    max-width: 237px;
+    height: 10px;
+    background-color: #379956;
+}
+
+.line2 {
+    background-Position: left;
+}
+
+.line-final {
+    min-width: 185px;
+    max-width: 237px;
+    height: 10px;
+    background-color: #379956;
 }
 
 #next {
@@ -118,12 +176,14 @@ h1 {
     border-radius: 10px;
     color: #FFFFFF;
     text-align: center;
+    transition: box-shadow 0.5s, margin-top 0.5s;
+    transition-timing-function: ease;
 }
 
 .next-btn:hover {
-    margin-top: -2px;
+    margin-top: -3px;
     cursor: pointer;
-    box-shadow: 3px #888888;
+    box-shadow: 3px 3px #888888;
 }
 
 #nav-sec-text {
@@ -206,9 +266,11 @@ h1 {
 }
 
 #nav-to-gal:hover {
-    margin-top: -2px;
+    margin-top: -3px;
     cursor: pointer;
-    box-shadow: 3px #888888;
+    box-shadow: 3px 3px #888888;
+    transition: box-shadow 0.5s, margin-top 0.5s;
+    transition-timing-function: ease;
 }
 
 .result-right {
@@ -231,7 +293,7 @@ h1 {
     color: #FFFFFF;
 }
 
-.line {
+.conLine {
     display: flex;
 }
 

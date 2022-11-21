@@ -39,6 +39,8 @@ body {
     font-size: 22px;
     font-weight: 400;
     border-radius: 50%;
+    transition: box-shadow 0.5s, margin-top 0.5s;
+    transition-timing-function: ease;
 }
 
 .gal-back:hover {
@@ -62,7 +64,6 @@ body {
     display: flex;
     width: 320px;
     min-height: 101px;
-    max-height: 640px;
     background-color: #D8CBBB;
     border-radius: 15px;
     flex-wrap: wrap;
@@ -96,6 +97,8 @@ body {
 	border-top: 50px solid #234C63;
     border-bottom: 0px;
     padding: 0px 0px 0px 0px;
+    transition: transform .5s;
+    transition-timing-function: ease;
 }
 
 .heu-sec-tri:hover {
