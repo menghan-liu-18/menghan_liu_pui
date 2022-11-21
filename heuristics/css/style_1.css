@@ -248,7 +248,7 @@ h1 {
 }
 
 .graph {
-    margin: -100px auto 0px auto;
+    margin: 10px auto 0px auto;
     min-height: 322px;
     display: flex;
     align-items: center;

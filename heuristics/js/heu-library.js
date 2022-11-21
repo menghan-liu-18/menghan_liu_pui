@@ -79,6 +79,6 @@ const question = {
         "A2": "Creaumy/Yoalumnix/Xagibdan > Vander/Hillard/Barnings",
         "Cor": "A1",
         "Exp": "You might notice that the names are either very complicated or relatively simple, and the fluency heuristics tells that people like to prefer things that are easily pronounceable and fluent. Therefore, you would process the names that are more fluent.",
-        "link": "over",
+        "link": "quiz-result.html",
     },
 }
