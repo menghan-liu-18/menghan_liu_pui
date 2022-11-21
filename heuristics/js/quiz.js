@@ -110,7 +110,7 @@ function changeColor(num) {
         if((j > 0) && (i < j)){
             const proNextL = document.querySelector('.line');
             proNextL.classList.remove("line");
-            proNextL.classList.add("line-static");
+            proNextL.classList.add("line-static-green");
         }
     }
 
