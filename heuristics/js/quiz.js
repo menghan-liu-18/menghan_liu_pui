@@ -1,7 +1,31 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const chosenQ = params.get('Num');
-console.log(chosenQ);
+
+let ans = initializeNum();
+
+function initializeNum() {
+    let ansNum = 0;
+
+    if (localStorage.getItem('ansNum') != null) {
+        const getAnsNum = localStorage.getItem('ansNum');
+        ansNum = JSON.parse(getAnsNum);
+    } else {
+        ansNum = 0;
+    } 
+
+    return ansNum;
+}
+
+function addOne() {
+    const getAnsNum = localStorage.getItem('ansNum');
+    ans = JSON.parse(getAnsNum);
+    ans += 1;
+    console.log(ans);
+
+    const ansString = JSON.stringify(ans);
+    localStorage.setItem('ansNum', ansString);
+}
 
 function answerClick(que) {
     const choiceL = document.getElementById('nav-btn-left');
@@ -23,6 +47,8 @@ function answerClick(que) {
             choiceL.style.pointerEvents = "none";
             choiceR.disabled = true;
             choiceR.style.pointerEvents = "none";
+
+            addOne();
         }
 
         choiceR.onclick = function() {
@@ -72,6 +98,8 @@ function answerClick(que) {
             choiceL.style.pointerEvents = "none";
             choiceR.disabled = true;
             choiceR.style.pointerEvents = "none";
+
+            addOne();
         }
     } 
 }

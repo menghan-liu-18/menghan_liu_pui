@@ -295,12 +295,25 @@ h1 {
 
 .conLine {
     display: flex;
+    align-items: center;
 }
 
 .small {
     display: inline;
     font-size: 24px;
     font-weight: lighter;
+}
+
+#num-heu {
+    padding: 0px 5px 0px 5px;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+#num-log {
+    padding: 0px 5px 0px 5px;
+    font-size: 32px;
+    font-weight: bolder;
 }
 
 .big {
