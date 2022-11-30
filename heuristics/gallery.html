@@ -13,16 +13,19 @@
         <link rel = "stylesheet" href = "css/style_2.css">
         <script defer src="js/heu-library.js"></script>
         <script defer src="js/gal.js"></script>
+
+        <!-- scroll animation-->
+        <link rel = "stylesheet" href = "https://unpkg.com/aos@next/dist/aos.css"/>
     </head>
 
     <body style="background-image: url('asset/Group 57.jpg');">
         <main class = "gal-main">
-            <div id = "gallery-h">Heuristics Gallery</div>
+            <div id = "gallery-h" data-aos-duration="1000" data-aos="fade-up">Heuristics Gallery</div>
 
             <button class = "gal-back"  onclick = "document.location = 'home.html'">Let's start over!</button>
         </main>
 
-        <div id = "heu-list">
+        <div id = "heu-list" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="100">
             <template id = "heu-template">
                 <div class = "heu-sec">
                     <div class = "heu-sec-text">
@@ -35,6 +38,9 @@
             </template>
         </div>
 
-
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script r>
+          AOS.init();
+        </script>
     </body>
 </html>

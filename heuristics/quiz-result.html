@@ -12,6 +12,9 @@
 
         <link rel = "stylesheet" href = "css/style_1.css">
         <script defer src="js/result.js"></script>
+
+        <!-- scroll animation-->
+        <link rel = "stylesheet" href = "https://unpkg.com/aos@next/dist/aos.css"/>
     </head>
 
     <body style="background-image: url('asset/Group 55.jpg');">
@@ -29,7 +32,7 @@
             <div class = "circle-final" style = "margin-right: auto"></div>
         </div>
 
-        <div class = "result-section">
+        <div class = "result-section" data-aos-duration="1000" data-aos="fade-up">
             <div class = "result-left">
                 <h2 id = "con">Congratulation, <br>you finished!</h2>
                 
@@ -74,5 +77,9 @@
             </div>
         </div>
 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script r>
+          AOS.init();
+        </script>
     </body>
 </html>
