@@ -325,26 +325,22 @@ h1 {
 
 .graph {
     margin: 10px auto 0px auto;
-    min-height: 322px;
+    height: 400px;
     display: flex;
     align-items: center;
     align-content: center;
-    gap: 100px;
+    gap: 50px;
 }
 
-#graph1 {
+/* #graph1 {
     width: 256px;
     height: 256px;
-    background-color: #FFFFFF;
-    border-radius: 128px;
 }
 
 #graph2 {
     width: 256px;
     height: 256px;
-    background-color: #FFFFFF;
-    border-radius: 128px;
-}
+} */
 
 .graph-text {
     text-align: center;

@@ -1,3 +1,8 @@
+if (localStorage.getItem('ansNum') != null) {
+        
+        localStorage.removeItem('ansNum');
+    }
+
 $ (function () {
 	$('h1').textillate({ 
         in: { effect: 'bounceIn'}});

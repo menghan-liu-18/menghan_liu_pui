@@ -4,6 +4,8 @@ const chosenQ = params.get('Num');
 
 let ans = initializeNum();
 
+let ansArr = initializeArr();
+
 function initializeNum() {
     let ansNum = 0;
 
@@ -15,6 +17,19 @@ function initializeNum() {
     } 
 
     return ansNum;
+}
+
+function initializeArr() {
+    let ansArr = [];
+
+    if (localStorage.getItem('ansArr') != null) {
+        const getAnsArr = localStorage.getItem('ansArr');
+        ansArr = JSON.parse(getAnsArr);
+    } else {
+        ansArr = [];
+    } 
+
+    return ansArr;
 }
 
 function addOne() {

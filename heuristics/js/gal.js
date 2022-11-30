@@ -1,7 +1,3 @@
-if (localStorage.getItem('ansNum') != null) {
-    localStorage.removeItem('ansNum');
-}
-
 function createHeu (heu) {
     const template = document.querySelector('#heu-template');
     const clone = template.content.cloneNode(true);

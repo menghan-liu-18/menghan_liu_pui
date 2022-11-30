@@ -1,6 +1,6 @@
 let ans = initializeNum();
 
-// let ansArr = initializeArr();
+let ansArr = initializeArr();
 
 function initializeNum() {
     let ansNum = 0;
@@ -15,18 +15,18 @@ function initializeNum() {
     return ansNum;
 }
 
-// function initializeArr() {
-//     let ansArr = [];
+function initializeArr() {
+    let ansArr = [];
 
-//     if (localStorage.getItem('ansNum') != null) {
-//         const getAnsNum = localStorage.getItem('ansNum');
-//         ansNum = JSON.parse(getAnsNum);
-//     } else {
-//         ansNum = 0;
-//     } 
+    if (localStorage.getItem('ansArr') != null) {
+        const getAnsArr = localStorage.getItem('ansArr');
+        ansArr = JSON.parse(getAnsArr);
+    } else {
+        ansArr = [];
+    } 
 
-//     return ansNum;
-// }
+    return ansArr;
+}
 
 function updateNumHeu() {
     const numHue = document.getElementById("num-heu");
@@ -38,28 +38,73 @@ function updateNumLo() {
     numLog.innerText = 6 - ans;
 }
 
-const graph1 = document.getElementById("graph1");
+function updateArr() {
+    ansArr.push(ans);
 
-function updateGraph() {
-    const graph1 = document.getElementById("graph1");
-    const graph2 = document.getElementById("graph2");
+    const ansArrString = JSON.stringify(ansArr);
+    localStorage.setItem('ansArr', ansArrString);
+}
+
+
+function pie() {
     const getAnsNum = localStorage.getItem('ansNum');
     ans = JSON.parse(getAnsNum);
-    const pA = (ans/6)*100;
-    const pAS = pA.toString() + '%';
-    const pL = ((6-ans)/6)*100;
-    const pLS = pL.toString() + '%';
-    console.log(pAS);
-    console.log(pLS);
 
-    // graph1.style.background = "conic-gradient(#E8CEAE ${pA}%, #E8E7E7 ${pL}%)";
-    graph2.style.background = "conic-gradient(#E8CEAE 60%, #E8E7E7 40%)";
-}
+    const getAnsArr = localStorage.getItem('ansArr');
+    ansArr = JSON.parse(getAnsArr);
+
+    const len = ansArr.length;
+    let totalNum = 0;
+    for(i = 0;i<len;i++){
+        totalNum += ansArr[i];
+    };
+    const oppoNum = len*6 - totalNum;
+
+    var ctx1 = document.getElementById("pie-chartcanvas-1");
+    var ctx2 = document.getElementById("pie-chartcanvas-2");
+
+    var data1 = {
+        labels: ["heuristics", "logic"],
+        datasets: [
+            {
+                label: "Your Score",
+                data: [ans, 6-ans],
+                backgroundColor: ["#E8CEAE", "#E8E7E7"],
+                borderWidth: [1, 1]
+            }
+        ]
+    }
+
+    var data2 = {
+        labels: ["heuristics", "logic"],
+        datasets: [
+            {
+                label: "Others' Scores",
+                data: [totalNum, oppoNum],
+                backgroundColor: ["#E8CEAE", "#E8E7E7"],
+                borderWidth: [1, 1]
+            }
+        ]
+    }
+
+    var chart1 = new Chart(ctx1, {
+        type: "pie",
+        data: data1,
+        options: {}
+    });
+
+    var chart2 = new Chart(ctx2, {
+        type: "pie",
+        data: data2,
+        options: {}
+    });
+};
 
 function update(){
     updateNumHeu();
     updateNumLo();
-    updateGraph()
+    updateArr()
+    pie();
 }
 
 update();

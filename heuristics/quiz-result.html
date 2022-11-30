@@ -16,6 +16,10 @@
         <!-- scroll animation-->
         <link rel = "stylesheet" href = "https://unpkg.com/aos@next/dist/aos.css"/>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <!-- chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     </head>
 
     <body style="background-image: url('asset/Group 55.jpg');">
@@ -60,12 +64,16 @@
 
                 <div class = "graph">
                     <div class = "graph-group">
-                        <div id = "graph1"></div>
+                        <div id = "graph1">
+                            <canvas id = "pie-chartcanvas-1" style="display: block; height: 225px; width: 450px;"></canvas>
+                        </div>
                         <p class = graph-text>Your Result</p>
                     </div>
                     
                     <div class = "graph-group">
-                        <div id = "graph2"></div>
+                        <div id = "graph2">
+                            <canvas id="pie-chartcanvas-2" style="display: block; height: 225px; width: 450px;"></canvas>
+                        </div>
                         <p class = graph-text>Other people's result</p>
                     </div>
                 </div>
@@ -79,7 +87,7 @@
         </div>
 
         
-        <script r>
+        <script>
           AOS.init();
         </script>
     </body>
