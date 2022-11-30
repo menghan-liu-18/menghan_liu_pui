@@ -10,9 +10,14 @@
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inconsolata'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
 
+        <!-- local files -->
         <link rel = "stylesheet" href = "css/style_1.css">
         <script defer src="js/heu-library.js"></script>
         <script defer src="js/quiz.js"></script>
+
+        <!-- scroll animation-->
+        <link rel = "stylesheet" href = "https://unpkg.com/aos@next/dist/aos.css"/>
+
     </head>
 
     <body style="background-image: url('asset/Group 55.jpg');">
@@ -36,14 +41,19 @@
 
         <h1></h1>
 
-        <div id = "intro">
+        <div id = "intro" data-aos="flip-left">
             <span id = "intro-text"></span>
         </div>
 
-        <div id = "nav-sec-text">
+        <div id = "nav-sec-text" data-aos="flip-left">
             <label for = "answer"></label>
             <input type = "text" id = "ans" name = "answer"><br><br>
             <button id = "submit">submit</button>
         </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script r>
+          AOS.init();
+        </script>
     </body>
 </html>

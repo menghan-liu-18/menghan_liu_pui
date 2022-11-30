@@ -20,9 +20,10 @@ h1 {
 
 .intro-home {
     width: 70%;
+    min-height: 200px;
     margin: 50px auto 50px auto;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: left;
     font-family: "Inconsolata";
     font-size: 30px;
@@ -334,14 +335,14 @@ h1 {
 #graph1 {
     width: 256px;
     height: 256px;
-    background-color: #E8CEAE;
+    background-color: #FFFFFF;
     border-radius: 128px;
 }
 
 #graph2 {
     width: 256px;
     height: 256px;
-    background-color: #E8CEAE;
+    background-color: #FFFFFF;
     border-radius: 128px;
 }
 
