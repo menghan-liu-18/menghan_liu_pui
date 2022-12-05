@@ -192,11 +192,11 @@ function updateQ() {
 
         const leftBtn = document.getElementById('nav-btn-left');
         leftBtn.innerText = question.No2.A1;
-        leftBtn.style.fontSize = "22px";
+        leftBtn.style.fontSize = "18px";
 
         const rightBtn = document.getElementById('nav-btn-right');
         rightBtn.innerText = question.No2.A2;
-        rightBtn.style.fontSize = "22px";
+        rightBtn.style.fontSize = "18px";
 
         changeColor(2);
 
