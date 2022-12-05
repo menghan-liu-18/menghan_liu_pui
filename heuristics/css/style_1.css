@@ -326,10 +326,15 @@ h1 {
 .graph {
     margin: 10px auto 0px auto;
     height: 400px;
+    /* width: 600px; */
     display: flex;
     align-items: center;
     align-content: center;
-    gap: 50px;
+}
+
+.graph-group {
+    width: 350px;
+    height: 200px;
 }
 
 /* #graph1 {
