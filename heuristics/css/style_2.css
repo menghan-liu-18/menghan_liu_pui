@@ -99,6 +99,7 @@ body {
     padding: 0px 0px 0px 0px;
     transition: transform .5s;
     transition-timing-function: ease;
+    color: #D8CBBB;
 }
 
 .heu-sec-tri:hover {
